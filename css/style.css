@@ -1,0 +1,439 @@
+/* ========== 1. DASAR CARTOON ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+  color: #292344;
+  line-height: 1.7;
+  background: #fffdf5;
+  background-image: radial-gradient(#e9dfff 1.5px, transparent 1.5px);
+  background-size: 24px 24px;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ========== 2. HEADER CARTOON ========== */
+.header {
+  background: #ffffff;
+  border-bottom: 4px solid #292344;
+  position: relative;
+  z-index: 10;
+}
+
+.header-isi {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 76px;
+  gap: 20px;
+}
+
+.logo {
+  font-size: 29px;
+  font-weight: 900;
+  color: #292344;
+  text-decoration: none;
+  letter-spacing: -1px;
+}
+
+.logo span {
+  color: #ff6584;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.nav a {
+  margin-left: 0;
+  padding: 7px 15px;
+  color: #292344;
+  text-decoration: none;
+  font-weight: 800;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  transition: 0.2s ease;
+}
+
+.nav a:hover {
+  background: #ffdf70;
+  border-color: #292344;
+  transform: translateY(-3px);
+}
+
+/* ========== 3. HERO CARTOON ========== */
+.hero {
+  background: #a9e7ff;
+  padding: 85px 0;
+  border-bottom: 4px solid #292344;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "✦";
+  position: absolute;
+  top: 25px;
+  left: 8%;
+  font-size: 65px;
+  color: #ffffff;
+  transform: rotate(-15deg);
+}
+
+.hero::after {
+  content: "✦";
+  position: absolute;
+  right: 8%;
+  bottom: 20px;
+  font-size: 55px;
+  color: #ffdf70;
+  transform: rotate(15deg);
+}
+
+.hero-isi {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-teks {
+  flex: 1;
+}
+
+.sapaan {
+  display: inline-block;
+  background: #ffffff;
+  color: #7655d9;
+  padding: 5px 15px;
+  border: 3px solid #292344;
+  border-radius: 12px;
+  font-weight: 900;
+  transform: rotate(-2deg);
+  margin-bottom: 12px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  line-height: 1.2;
+  font-weight: 900;
+  color: #292344;
+  text-shadow: 3px 3px 0 #ffffff;
+  margin-bottom: 10px;
+}
+
+.peran {
+  font-size: 21px;
+  color: #493b80;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.hero-teks > p:not(.sapaan):not(.peran) {
+  font-weight: 600;
+}
+
+.hero-foto {
+  width: 280px;
+  height: 280px;
+  border-radius: 35%;
+  object-fit: cover;
+  border: 6px solid #292344;
+  background: #ffdf70;
+  box-shadow: 9px 9px 0 #ff6584;
+  transform: rotate(3deg);
+  transition: transform 0.3s ease;
+}
+
+.hero-foto:hover {
+  transform: rotate(0deg) scale(1.04);
+}
+
+/* ========== 4. TOMBOL CARTOON ========== */
+.tombol {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background: #ff6584;
+  color: #292344;
+  text-decoration: none;
+  font-weight: 900;
+  border: 3px solid #292344;
+  border-radius: 14px;
+  box-shadow: 4px 4px 0 #292344;
+  transition: 0.2s ease;
+}
+
+.tombol:hover {
+  background: #ffdf70;
+  transform: translate(3px, 3px);
+  box-shadow: 1px 1px 0 #292344;
+}
+
+/* ========== 5. TENTANG & KEAHLIAN ========== */
+.bagian {
+  padding: 75px 0;
+}
+
+.bagian h2 {
+  display: inline-block;
+  font-size: 32px;
+  font-weight: 900;
+  margin-bottom: 20px;
+  color: #292344;
+  background: #ffdf70;
+  padding: 5px 18px;
+  border: 3px solid #292344;
+  border-radius: 12px;
+  box-shadow: 5px 5px 0 #292344;
+}
+
+.bagian h3 {
+  font-weight: 900;
+}
+
+.judul-kecil {
+  margin: 30px 0 15px;
+  font-size: 22px;
+}
+
+.keahlian {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.keahlian li {
+  background: #c8f7c5;
+  color: #292344;
+  padding: 7px 17px;
+  border: 2px solid #292344;
+  border-radius: 14px;
+  font-weight: 800;
+  box-shadow: 3px 3px 0 #292344;
+  transition: 0.2s ease;
+}
+
+.keahlian li:nth-child(even) {
+  background: #ffc9dc;
+}
+
+.keahlian li:hover {
+  transform: translateY(-4px) rotate(-2deg);
+}
+
+/* ========== 6. PROYEK CARTOON ========== */
+.bagian-abu {
+  background: #e9ddff;
+  border-top: 4px solid #292344;
+  border-bottom: 4px solid #292344;
+}
+
+.daftar-proyek {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 15px;
+}
+
+.kartu {
+  background: #ffffff;
+  border: 3px solid #292344;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 6px 6px 0 #292344;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.kartu:hover {
+  transform: translateY(-7px) rotate(-1deg);
+  box-shadow: 9px 10px 0 #292344;
+}
+
+.kartu img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-bottom: 3px solid #292344;
+  background: #ffdf70;
+}
+
+.kartu-isi {
+  padding: 20px;
+}
+
+.kartu-isi h3 {
+  margin-bottom: 8px;
+  font-size: 20px;
+  font-weight: 900;
+  color: #7655d9;
+}
+
+.kartu-isi p {
+  font-size: 14px;
+}
+
+.kartu-isi a {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 6px 12px;
+  color: #292344;
+  background: #a9e7ff;
+  border: 2px solid #292344;
+  border-radius: 9px;
+  font-weight: 900;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+.kartu-isi a:hover {
+  background: #ffdf70;
+  transform: translateY(-2px);
+}
+
+/* ========== 7. KONTAK ========== */
+.kontak {
+  text-align: center;
+  background: #ffffff;
+  padding: 35px 25px;
+  border: 3px solid #292344;
+  border-radius: 25px;
+  box-shadow: 7px 7px 0 #292344;
+}
+
+.kontak h2 {
+  background: #ffc9dc;
+}
+
+.kontak > p {
+  font-weight: 600;
+}
+
+.sosmed {
+  margin-top: 25px;
+}
+
+.sosmed a {
+  display: inline-block;
+  color: #7655d9;
+  font-weight: 900;
+  text-decoration: none;
+  margin: 3px;
+}
+
+.sosmed a:hover {
+  color: #ff6584;
+  text-decoration: underline;
+}
+
+/* ========== 8. FOOTER ========== */
+.footer {
+  background: #292344;
+  color: #ffffff;
+  text-align: center;
+  padding: 25px 15px;
+  margin-top: 10px;
+  border-top: 5px solid #ff6584;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* ========== 9. RESPONSIVE ========== */
+@media (max-width: 768px) {
+  .header-isi {
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    gap: 10px;
+  }
+
+  .nav {
+    justify-content: center;
+  }
+
+  .nav a {
+    padding: 6px 10px;
+    font-size: 14px;
+  }
+
+  .hero {
+    padding: 60px 0;
+  }
+
+  .hero-isi {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .hero-foto {
+    width: 200px;
+    height: 200px;
+  }
+
+  .daftar-proyek {
+    grid-template-columns: 1fr;
+  }
+
+  .kartu img {
+    height: 220px;
+  }
+
+  .bagian {
+    padding: 55px 0;
+  }
+
+  .bagian h2 {
+    font-size: 27px;
+  }
+
+  .kontak {
+    padding: 25px 15px;
+  }
+}
+
+/* ========== 10. LAYAR SANGAT KECIL ========== */
+@media (max-width: 380px) {
+  .hero h1 {
+    font-size: 30px;
+  }
+
+  .nav {
+    gap: 3px;
+  }
+
+  .nav a {
+    padding: 5px 7px;
+    font-size: 12px;
+  }
+
+  .bagian h2 {
+    font-size: 23px;
+  }
+}
